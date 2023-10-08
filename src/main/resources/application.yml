@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    #    url: jdbc:mysql://localhost/my_library?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true
+    #    username: root
+    #    password: root
+    url: jdbc:sqlserver://yulia-dyka.database.windows.net:1433;database=db_jdbc_imdb;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
+    username: db_jdbc_imdb@yulia-dyka
+    password: Ir-31013107606
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  jpa:
+    # Show or not log for each sql query
+    show-sql: true
+    hibernate:
+      # Hibernate ddl auto (validate, create, create-drop, update)
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+
+  mvc: # the fix for swagger
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+server:
+  port: 8080
