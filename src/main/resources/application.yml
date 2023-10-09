@@ -4,7 +4,7 @@ spring:
     #    username: root
     #    password: root
     url: jdbc:sqlserver://yulia-dyka.database.windows.net:1433;database=db_jdbc_imdb;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
-    username: db_jdbc_imdb@yulia-dyka
+    username: user1
     password: Ir-31013107606
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
   jpa:
@@ -15,7 +15,7 @@ spring:
       ddl-auto: update
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.MySQL8Dialect
+        dialect: org.hibernate.dialect.SQLServer2016Dialect
 
   mvc: # the fix for swagger
     pathmatch:
