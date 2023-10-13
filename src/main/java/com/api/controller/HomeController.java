@@ -10,17 +10,17 @@ public class HomeController {
     @GetMapping(value = "")
     public String GetHomePage() {
         String strOutput = "-------------- POST --------------------<br>";
-        strOutput = strOutput + "https://films-ratings-yulia.azurewebsites.net/app/films<br>";
-        strOutput = strOutput + "https://films-ratings-yulia.azurewebsites.net/app/actors<br>";
-        strOutput = strOutput + "https://films-ratings-yulia.azurewebsites.net/app/budgets<br>";
-        strOutput = strOutput + "https://films-ratings-yulia.azurewebsites.net/app/cashCollections<br>";
-        strOutput = strOutput + "https://films-ratings-yulia.azurewebsites.net/app/countries<br>";
-        strOutput = strOutput + "https://films-ratings-yulia.azurewebsites.net/app/nominations<br>";
-        strOutput = strOutput + "https://films-ratings-yulia.azurewebsites.net/app/raitings<br>";
-        strOutput = strOutput + "https://films-ratings-yulia.azurewebsites.net/app/reviewers<br>";
+        strOutput = strOutput + "https://films-ratings-yulia.azurewebsites.net/api/films<br>";
+        strOutput = strOutput + "https://films-ratings-yulia.azurewebsites.net/api/actors<br>";
+        strOutput = strOutput + "https://films-ratings-yulia.azurewebsites.net/api/budgets<br>";
+        strOutput = strOutput + "https://films-ratings-yulia.azurewebsites.net/api/cashCollections<br>";
+        strOutput = strOutput + "https://films-ratings-yulia.azurewebsites.net/api/countries<br>";
+        strOutput = strOutput + "https://films-ratings-yulia.azurewebsites.net/api/nominations<br>";
+        strOutput = strOutput + "https://films-ratings-yulia.azurewebsites.net/api/raitings<br>";
+        strOutput = strOutput + "https://films-ratings-yulia.azurewebsites.net/api/reviewers<br>";
         strOutput = strOutput + "-------------- GET --------------------<br>";
-        strOutput = strOutput + "https://films-ratings-yulia.azurewebsites.net/api/films/1/actors<br>";
-        strOutput = strOutput + "https://films-ratings-yulia.azurewebsites.net/api/actors/1/films<br>";
+        strOutput = strOutput + "https://films-ratings-yulia.azurewebsites.net/api/films/1<br>";
+        strOutput = strOutput + "https://films-ratings-yulia.azurewebsites.net/api/actors/2<br>";
         strOutput = strOutput + "https://films-ratings-yulia.azurewebsites.net/api/budgets/1<br>";
         strOutput = strOutput + "https://films-ratings-yulia.azurewebsites.net/api/cashCollections/1<br>";
         strOutput = strOutput + "https://films-ratings-yulia.azurewebsites.net/api/countries/1<br>";
