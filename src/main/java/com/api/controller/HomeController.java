@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class HomeController {
     @GetMapping(value = "")
     public String GetHomePage() {
-        String strOutput = "-------------- POST --------------------<br>";
+        String strOutput = "-------------- GET ALL --------------------<br>";
         strOutput = strOutput + "https://films-ratings-yulia.azurewebsites.net/api/films<br>";
         strOutput = strOutput + "https://films-ratings-yulia.azurewebsites.net/api/actors<br>";
         strOutput = strOutput + "https://films-ratings-yulia.azurewebsites.net/api/budgets<br>";
@@ -18,7 +18,7 @@ public class HomeController {
         strOutput = strOutput + "https://films-ratings-yulia.azurewebsites.net/api/nominations<br>";
         strOutput = strOutput + "https://films-ratings-yulia.azurewebsites.net/api/raitings<br>";
         strOutput = strOutput + "https://films-ratings-yulia.azurewebsites.net/api/reviewers<br>";
-        strOutput = strOutput + "-------------- GET --------------------<br>";
+        strOutput = strOutput + "-------------- GET BY ID --------------------<br>";
         strOutput = strOutput + "https://films-ratings-yulia.azurewebsites.net/api/films/1<br>";
         strOutput = strOutput + "https://films-ratings-yulia.azurewebsites.net/api/actors/2<br>";
         strOutput = strOutput + "https://films-ratings-yulia.azurewebsites.net/api/budgets/1<br>";
