@@ -27,6 +27,8 @@ public class HomeController {
         strOutput = strOutput + "https://films-ratings-yulia.azurewebsites.net/api/nominations/1<br>";
         strOutput = strOutput + "https://films-ratings-yulia.azurewebsites.net/api/raitings/1<br>";
         strOutput = strOutput + "https://films-ratings-yulia.azurewebsites.net/api/reviewers/1<br>";
+        strOutput = strOutput + "-------------- SWAGGER --------------------<br>";
+        strOutput = strOutput + "https://films-ratings-yulia.azurewebsites.net/swagger-ui/";
         return strOutput;
     }
 }

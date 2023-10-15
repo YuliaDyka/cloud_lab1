@@ -31,7 +31,7 @@ public class FilmsEntity {
     @OneToMany(mappedBy = "info")
     private List<ReviewersEntity> reviewers;
     @ManyToMany
-    @JoinTable(name = "filmactors", catalog = "", schema = "db_jdbc_imdb", joinColumns = @JoinColumn(name = "film_id", referencedColumnName = "id", nullable = false), inverseJoinColumns = @JoinColumn(name = "actor_id", referencedColumnName = "id", nullable = false))
+    @JoinTable(name = "filmactors", joinColumns = @JoinColumn(name = "film_id", referencedColumnName = "id", nullable = false), inverseJoinColumns = @JoinColumn(name = "actor_id", referencedColumnName = "id", nullable = false))
     private Set<ActorsEntity> actors;
 
     public Integer getId() {
@@ -60,8 +60,10 @@ public class FilmsEntity {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
         FilmsEntity that = (FilmsEntity) o;
         return Objects.equals(id, that.id) && Objects.equals(name, that.name) && Objects.equals(date, that.date);
     }
