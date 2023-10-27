@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "budget")
+@Table(name = "budget", schema = "films-info", catalog = "")
 public class BudgetEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
@@ -43,8 +43,10 @@ public class BudgetEntity {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
         BudgetEntity that = (BudgetEntity) o;
         return Objects.equals(id, that.id) && Objects.equals(price, that.price) && Objects.equals(filmId, that.filmId);
     }

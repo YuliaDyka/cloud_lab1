@@ -6,7 +6,7 @@ import java.util.Objects;
 import java.util.Set;
 
 @Entity
-@Table(name = "films")
+@Table(name = "films", schema = "films-info", catalog = "")
 public class FilmsEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
@@ -31,7 +31,7 @@ public class FilmsEntity {
     @OneToMany(mappedBy = "info")
     private List<ReviewersEntity> reviewers;
     @ManyToMany
-    @JoinTable(name = "filmactors", joinColumns = @JoinColumn(name = "film_id", referencedColumnName = "id", nullable = false), inverseJoinColumns = @JoinColumn(name = "actor_id", referencedColumnName = "id", nullable = false))
+    @JoinTable(name = "filmactors", catalog = "", schema = "db_jdbc_imdb", joinColumns = @JoinColumn(name = "film_id", referencedColumnName = "id", nullable = false), inverseJoinColumns = @JoinColumn(name = "actor_id", referencedColumnName = "id", nullable = false))
     private Set<ActorsEntity> actors;
 
     public Integer getId() {

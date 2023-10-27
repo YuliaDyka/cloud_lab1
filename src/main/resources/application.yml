@@ -3,10 +3,12 @@ spring:
     #    url: jdbc:mysql://localhost/my_library?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true
     #    username: root
     #    password: root
-    url: jdbc:sqlserver://yulia-dyka.database.windows.net:1433;database=db_jdbc_imdb;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
-    username: user1
+    # String url="jdbc:mysql://yulia-mysql-server.mysql.database.azure.com:3306/{your_database}?useSSL=true";myDbConn=DriverManager.getConnection(url, "Yulia", "{your_password}");
+
+    url: jdbc:mysql://yulia-mysql-server.mysql.database.azure.com:3306/films-info?useSSL=true
+    username: Yulia
     password: Ir-31013107606
-    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     # Show or not log for each sql query
     show-sql: true
@@ -15,7 +17,7 @@ spring:
       ddl-auto: update
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.SQLServer2016Dialect
+        dialect: org.hibernate.dialect.MySQL8Dialect
 
   mvc: # the fix for swagger
     pathmatch:

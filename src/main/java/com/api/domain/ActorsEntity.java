@@ -5,7 +5,7 @@ import java.util.Objects;
 import java.util.Set;
 
 @Entity
-@Table(name = "actors")
+@Table(name = "actors", schema = "films-info", catalog = "")
 public class ActorsEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
@@ -46,8 +46,10 @@ public class ActorsEntity {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
         ActorsEntity that = (ActorsEntity) o;
         return Objects.equals(id, that.id) && Objects.equals(fullName, that.fullName) && Objects.equals(age, that.age);
     }

@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "nominations")
+@Table(name = "nominations", schema = "films-info", catalog = "")
 public class NominationsEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
@@ -43,10 +43,13 @@ public class NominationsEntity {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
         NominationsEntity that = (NominationsEntity) o;
-        return Objects.equals(id, that.id) && Objects.equals(nomination, that.nomination) && Objects.equals(filmId, that.filmId);
+        return Objects.equals(id, that.id) && Objects.equals(nomination, that.nomination)
+                && Objects.equals(filmId, that.filmId);
     }
 
     @Override
