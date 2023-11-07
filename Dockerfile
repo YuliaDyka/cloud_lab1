@@ -1,7 +1,6 @@
 FROM alpine/git as clone
 WORKDIR /repo
-RUN echo $(git clone --branch lab_2 https://github.com/YuliaDyka/cloud_lab1.git)
-RUN echo $(ls)
+RUN git clone --branch lab_2 https://github.com/YuliaDyka/cloud_lab1.git
 
 FROM maven:3.8.3-openjdk-17 as build
 WORKDIR /src
